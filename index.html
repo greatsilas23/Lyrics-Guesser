@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LYRICS GUESSER</title>
+        <meta charset="utf-8">
+        <meta name="author" content="gretsilas23">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="arrQuestions()">
+        <div id="opaque_background" onclick="showPrimaryScreen()" class="hide_stuff opaque_background big_width big_height level_two"></div>
+        <div id="game_screen_popup" class="hide_overflow add_corner_radius game_screen_popup moderate_width moderate_height color_red level_three hide_stuff flex_stuff vertic">
+            <div class="moderate_width moderate_height flex_stuff horiz ">
+                <div id="" class="questions hide_overflow ">
+                    <div class="moderate_width add_padding flex_stuff vertic">
+                        <div class="flex_stuff center_stuff">
+                            <img class="add_corner_radius" src="img_prisoner.jpg" width="150" height="150" alt="prisoner">
+                        </div>
+                        <div class="flex_stuff center_stuff add_container_items_spaces">
+                            <audio controls>
+                                <source src="./audio_prisoner_section_1.mp3"/>
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="choices_container flex_stuff center_stuff add_corner_radius color_red moderate_width small_height horiz">
+                        <form name="answer_form">
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Somebody told me about it, When I was still a little boy</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Ministers of religion Have visited me many times To talk about it</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>In my whole life My whole life I've got a dream</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Breaking those barriers All over the world Was not an easy thing</label>
+                        </form>    
+                    </div>
+                </div>
+                <div id="" class="questions hide_overflow ">
+                    <div class="moderate_width add_padding flex_stuff vertic">
+                        <div class="flex_stuff center_stuff">
+                            <img class="add_corner_radius" src="img_lucky_dube.png" width="150" height="150" alt="prisoner">
+                        </div>
+                        <div class="flex_stuff center_stuff add_container_items_spaces">
+                            <audio controls>
+                                <source src="./audio_prisoner_section_1.mp3"/>
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="choices_container flex_stuff center_stuff add_corner_radius color_red moderate_width small_height horiz">
+                        <form name="answer_form">
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Somebody told me about it, When I was still a little boy</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Ministers of religion Have visited me many times To talk about it</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>In my whole life My whole life I've got a dream</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Breaking those barriers All over the world Was not an easy thing</label>
+                        </form>
+                    </div>
+                </div>
+                <div id="" class="questions hide_overflow ">
+                    <div class="moderate_width add_padding flex_stuff vertic">
+                        <div class="flex_stuff center_stuff">
+                            <img class="add_corner_radius" src="img_slave.jpg" width="150" height="150" alt="prisoner">
+                        </div>
+                        <div class="flex_stuff center_stuff add_container_items_spaces">
+                            <audio controls>
+                                <source src="./audio_prisoner_section_1.mp3"/>
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="choices_container flex_stuff center_stuff add_corner_radius color_red moderate_width small_height horiz">
+                        <form name="answer_form">
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Somebody told me about it, When I was still a little boy</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Ministers of religion Have visited me many times To talk about it</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>In my whole life My whole life I've got a dream</label>
+                            <input type="checkbox" class="answers" onchange="nextQn()"><label>Breaking those barriers All over the world Was not an easy thing</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="add_padding add_container_items_spaces moderate_width small_height flex_stuff center_stuff add_corner_radius color horiz">
+                <button class="format_btn add_corner_radius small_height small_width color_green add_container_items_spaces" onclick="hideGame()">QUIT GAME</button>
+                <button class="format_btn add_corner_radius small_height small_width color_green add_container_items_spaces" onclick="showClue()">SHOW ANSWER CLUE</button>
+            </div>
+        </div>
+        <div class="top_title_element flex_stuff center_stuff color_red add_font_family level_one"><h2>LYRIC GUESSER</h2></div>
+        <div class="main_parent_element flex_stuff center_stuff level_one vertic">
+            <div class="flex_stuff center_stuff vertic lesser_width">
+                <button class="btn_start_game add_corner_radius color_yellow add_font_family small_width" onclick="showSongsPopup()">BEGIN</button>
+            </div>
+        </div>
+        <div id="songs_popup_section" class="songs_popup_section level_three hide_stuff">
+            <div class="song_card_container flex_stuff center_stuff add_corner_radius horiz big_width moderate_height moderate_width color_red">
+                <div class="song_card add_padding add_corner_radius add_container_items_spaces color_yellow">
+                    <div class="flex_stuff center_stuff">
+                        <img class="add_corner_radius" src="img_prisoner.jpg" width="150" height="150" alt="prisoner">
+                    </div>
+                    <div class="color_yellow">
+                        <p>Lucky Dube - Prisoner</p>
+                    </div>
+                    <div class="add_corner_radius small_height small_width flex_stuff center_stuff">
+                        <button class="btn_game color_green add_corner_radius" onclick="showGame()">START</button>
+                    </div>
+                </div>
+                <div class="song_card add_padding add_corner_radius add_container_items_spaces color_yellow">
+                    <div class="flex_stuff center_stuff">
+                        <img class="add_corner_radius" src="img_slave.jpg" width="150" height="150" alt="prisoner">
+                    </div>
+                    <div class="color_yellow">
+                        <p>Lucky Dube - Prisoner</p>
+                    </div>
+                    <div class="add_corner_radius small_height small_width flex_stuff center_stuff">
+                        <button class="btn_game color_green add_corner_radius" onclick="showGame()">START</button>
+                    </div>
+                </div>
+                <div class="song_card add_padding add_corner_radius add_container_items_spaces color_yellow">
+                    <div class="flex_stuff center_stuff">
+                        <img class="add_corner_radius" src="img_lucky_dube.png" width="150" height="150" alt="prisoner">
+                    </div>
+                    <div class="color_yellow">
+                        <p>Lucky Dube - Prisoner</p>
+                    </div>
+                    <div class="add_corner_radius small_height small_width flex_stuff center_stuff">
+                        <button class="btn_game color_green add_corner_radius" onclick="showGame()">START</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="song_long_answers" class="hide_stuff moderate_width moderate_height color_red add_corner_radius add_padding song_long_answers level_three">
+            <div id="lyrics_slave" class="song_lyrics lesser_height add_container_items_spaces moderate_width flex_stuff vertic">
+                <div class="flex_stuff center_stuff">
+                    <img class="add_corner_radius" src="img_prisoner.jpg" width="150" height="150" alt="prisoner">
+                </div>
+                <div class="flex_stuff center_stuff">
+                    <p>Lucky Dube - Slave</p>
+                </div> 
+                <center>
+                    <div id="slave_lyrics_section" class="add_corner_radius add_white_text slightly_lesser_height lesser_width scroll_vertically color_yellow"></div>
+                </center>
+                <div class="flex_stuff center_stuff lesser_width add_container_items_spaces">
+                    <button class="btn_game center_stubborn_button add_corner_radius color_yellow add_font_family small_width" onclick="hideClue()">CLOSE CLUE</button>
+                </div>
+            </div>
+        </div>
+        <div class="top_title_element flex_stuff center_stuff color_green add_font_family place_bottom"><h2>LYRIC GUESSER</h2></div>
+    </body>
+    <script src="script.js"></script>
+</html>
